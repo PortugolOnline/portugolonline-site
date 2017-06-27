@@ -1,6 +1,6 @@
 #!/bin/bash
-SOURCE="vinyanalista-website"
-TARGET="vinyanalista.github.io"
+SOURCE="site"
+TARGET="portugolonline.github.io"
 
 git add --all .
 git stash
@@ -12,7 +12,7 @@ git rm -rf *
 touch .nojekyll
 cp -r ../$SOURCE/_site/* .
 git add --all .
-git commit -m "Publishing website (see commit $LAST_COMMIT_HASH from $SOURCE)"
+git commit -m "Publicando o site (ver commit $LAST_COMMIT_HASH do repositório $SOURCE)"
 git push
 cd "../$SOURCE"
 git stash pop
