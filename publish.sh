@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCE="site"
+SOURCE="portugolonline-site"
 TARGET="portugolonline.github.io"
 
 git add --all .
