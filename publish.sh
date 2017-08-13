@@ -1,4 +1,5 @@
 #!/bin/bash
+USER="portugolonline"
 SOURCE="portugolonline-site"
 TARGET="portugolonline.github.io"
 
@@ -12,7 +13,7 @@ git rm -rf *
 touch .nojekyll
 cp -r ../$SOURCE/_site/* .
 git add --all .
-git commit -m "Publicando o site (ver commit $LAST_COMMIT_HASH do repositório $SOURCE)"
+git commit -m "Publicando o site (ver commit $USER/$SOURCE@$LAST_COMMIT_HASH)"
 git push
 cd "../$SOURCE"
 git stash pop
